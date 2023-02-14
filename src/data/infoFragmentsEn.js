@@ -1,4 +1,4 @@
-const infoFragments = [
+const infoFragmentsEn = [
   {
     heading: 'THE PARTY',
     subheadingOne: 'Saturday',
@@ -28,4 +28,4 @@ const infoFragments = [
   },
 ];
 
-export default infoFragments;
+export default infoFragmentsEn;

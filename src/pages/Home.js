@@ -2,7 +2,8 @@ import React from 'react';
 
 import { useStateValue } from '../StateProvider';
 import InfoFragment from '../components/InfoFragment';
-import infoFragments from '../data/infoFragments';
+import infoFragmentsEn from '../data/infoFragmentsEn';
+import infoFragmentsEs from '../data/infoFragmentsEs';
 
 function Home() {
   const [{ language }] = useStateValue();
@@ -25,11 +26,22 @@ function Home() {
         </div>
       </section>
 
-      <InfoFragment {...infoFragments[0]} />
-      <InfoFragment {...infoFragments[1]} />
+      {language === 'en' ? (
+        <InfoFragment {...infoFragmentsEn[0]} />
+      ) : (
+        <InfoFragment {...infoFragmentsEs[0]} />
+      )}
+
+      {language === 'en' ? (
+        <InfoFragment {...infoFragmentsEn[1]} />
+      ) : (
+        <InfoFragment {...infoFragmentsEs[1]} />
+      )}
 
       <section className='home__pictures'>
-        <span className='home__pictures-one'>04</span>
+        <span className='home__pictures-one'>
+          {language === 'en' ? '04' : '08'}
+        </span>
         <img
           className='home__pictures-two'
           src='http://via.placeholder.com/250'
@@ -40,7 +52,9 @@ function Home() {
           src='http://via.placeholder.com/250'
           alt=''
         />
-        <span className='home__pictures-four'>08</span>
+        <span className='home__pictures-four'>
+          {language === 'en' ? '08' : '04'}
+        </span>
         <img
           className='home__pictures-five'
           src='http://via.placeholder.com/250'
@@ -62,7 +76,7 @@ function Home() {
         </div>
       </section>
 
-      <InfoFragment {...infoFragments[2]} />
+      <InfoFragment {...infoFragmentsEn[2]} />
 
       <img
         className='home__templeImg'
