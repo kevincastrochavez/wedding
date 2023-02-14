@@ -1,24 +1,29 @@
 import React from 'react';
 
-function InfoFragment() {
+function InfoFragment({
+  heading,
+  subheadingOne,
+  subheadingTwo,
+  subheadingThree,
+  description,
+  linkText,
+  link,
+}) {
   return (
     <section className='infoFragment'>
-      <h2>THE PARTY</h2>
+      <h2>{heading}</h2>
 
       <div className='infoFragment__bar'></div>
 
       <div className='infoFragment__headings'>
-        <h3>Saturday</h3>
-        <h3>March 25</h3>
-        <h3>2023</h3>
+        <h3>{subheadingOne}</h3>
+        <h3>{subheadingTwo}</h3>
+        <h3>{subheadingThree}</h3>
       </div>
 
-      <p>
-        Join the celebration as Citlalli Gonzalez and Kevin Castro say "I do" on
-        the shores of beautiful Lake Tahoe, California.
-      </p>
+      <p>{description}</p>
 
-      <a href=''>RSVP</a>
+      <a href={link}>{linkText}</a>
     </section>
   );
 }
