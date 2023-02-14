@@ -1,8 +1,14 @@
 import React from 'react';
+
+import { useStateValue } from '../StateProvider';
 import InfoFragment from '../components/InfoFragment';
 import infoFragments from '../data/infoFragments';
 
 function Home() {
+  const [{ language }] = useStateValue();
+
+  console.log(language);
+
   return (
     <main className='home'>
       <section className='home__hero'>
@@ -13,8 +19,8 @@ function Home() {
 
       <section className='home__party'>
         <div className='home__date'>
-          <span>25</span>
-          <span>03</span>
+          <span>{language === 'en' ? '03' : '25'}</span>
+          <span>{language === 'en' ? '25' : '03'}</span>
           <span>23</span>
         </div>
       </section>
