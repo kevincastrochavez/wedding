@@ -1,0 +1,41 @@
+.infoFragment {
+  padding: 0 24px;
+  margin-bottom: 90px;
+
+  & h2 {
+    font-family: $body;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  &__bar {
+    margin: 20px 0 40px;
+    width: 30px;
+    height: 4px;
+    background-color: $gray;
+  }
+
+  &__headings {
+    margin-bottom: 40px;
+  }
+
+  & h3 {
+    font-size: 40px;
+  }
+
+  & p {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 40px;
+  }
+
+  & a {
+    font-family: $body;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    border-bottom: 1px solid $blue;
+    color: $blue;
+  }
+}

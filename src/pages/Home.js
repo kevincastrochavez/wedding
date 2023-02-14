@@ -1,4 +1,5 @@
 import React from 'react';
+import InfoFragment from '../components/InfoFragment';
 
 function Home() {
   return (
@@ -16,6 +17,8 @@ function Home() {
           <span>23</span>
         </div>
       </section>
+
+      <InfoFragment />
     </main>
   );
 }

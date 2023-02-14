@@ -8,7 +8,6 @@
 
     & h1 {
       font-size: 72px;
-      color: $blue;
       max-width: 200px;
       grid-row: 1/2;
       grid-column: 1/2;
@@ -31,6 +30,7 @@
   &__date {
     display: grid;
     justify-items: end;
+    margin-bottom: 60px;
 
     & span {
       font-family: $heading;
