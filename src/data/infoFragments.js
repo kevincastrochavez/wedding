@@ -17,6 +17,15 @@ const infoFragments = [
     linkText: 'Church of Jesus Christ',
     link: '#',
   },
+  {
+    heading: 'THE SEALING',
+    subheadingOne: 'Mexico',
+    subheadingTwo: 'City,',
+    subheadingThree: 'Temple',
+    description: undefined,
+    linkText: 'Mexico City Temple',
+    link: '#',
+  },
 ];
 
 export default infoFragments;
