@@ -3,15 +3,18 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import './styles/main.scss';
+
 import reportWebVitals from './reportWebVitals';
 import Home from './pages/Home';
 import Gallery from './pages/Gallery';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { StateProvider } from './StateProvider';
+import reducer, { initialState } from './reducer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <StateProvider initialState={initialState} reducer={reducer}>
     <BrowserRouter>
       <Header />
 
@@ -22,7 +25,7 @@ root.render(
 
       <Footer />
     </BrowserRouter>
-  </React.StrictMode>
+  </StateProvider>
 );
 
 reportWebVitals();

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
@@ -14,10 +15,13 @@ import {
 } from '@mui/material';
 
 import Logo from '../assets/Logo.png';
-import { Link } from 'react-router-dom';
+import { useStateValue } from '../StateProvider';
 
 function Header() {
+  const [{ language }, dispatch] = useStateValue();
   const [open, setOpen] = useState(false);
+
+  console.log(language);
 
   const toggleDrawer = (openAction) => (event) => {
     if (
@@ -30,6 +34,20 @@ function Header() {
     setOpen(openAction);
   };
 
+  const handleSpanish = () => {
+    dispatch({
+      type: 'CHANGE_TO_SPANISH',
+      language: 'es',
+    });
+  };
+
+  const handleEnglish = () => {
+    dispatch({
+      type: 'CHANGE_TO_ENGLISH',
+      language: 'en',
+    });
+  };
+
   return (
     <header className='header'>
       <Link to='/'>
@@ -37,9 +55,19 @@ function Header() {
       </Link>
 
       <div className='header__translate'>
-        <span>English</span>
+        <span
+          className={language === 'en' ? 'header__active' : undefined}
+          onClick={handleEnglish}
+        >
+          English
+        </span>
         <div className='header__divider'></div>
-        <span>Español</span>
+        <span
+          className={language === 'es' ? 'header__active' : undefined}
+          onClick={handleSpanish}
+        >
+          Español
+        </span>
       </div>
 
       <MenuIcon onClick={toggleDrawer(true)} />
