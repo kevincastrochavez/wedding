@@ -74,7 +74,7 @@ function Header() {
 
       <Drawer open={open} onClose={toggleDrawer(false)} anchor='right'>
         <Box
-          sx={{ width: 200 }}
+          sx={{ width: 150 }}
           role='presentation'
           onClick={toggleDrawer(false)}
           onKeyDown={toggleDrawer(false)}
@@ -91,16 +91,18 @@ function Header() {
               </ListItem>
             </Link>
 
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <ConfirmationNumberIcon />
-                </ListItemIcon>
-                <ListItemText primary='RSVP' />
-              </ListItemButton>
-            </ListItem>
+            <a href='#'>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    <ConfirmationNumberIcon />
+                  </ListItemIcon>
+                  <ListItemText primary='RSVP' />
+                </ListItemButton>
+              </ListItem>
+            </a>
 
-            <Link to='gallery'>
+            <Link to='/gallery'>
               <ListItem disablePadding>
                 <ListItemButton>
                   <ListItemIcon>
