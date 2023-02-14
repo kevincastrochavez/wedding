@@ -6,6 +6,8 @@ import './styles/main.scss';
 import reportWebVitals from './reportWebVitals';
 import Home from './pages/Home';
 import Gallery from './pages/Gallery';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 const router = createBrowserRouter([
   {
@@ -21,7 +23,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Header />
     <RouterProvider router={router} />
+    <Footer />
   </React.StrictMode>
 );
 

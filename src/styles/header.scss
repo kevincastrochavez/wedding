@@ -1,0 +1,32 @@
+.header {
+  padding: 24px;
+  display: flex;
+
+  & a {
+    flex: 1;
+
+    & img {
+      width: 10px;
+      height: 50px;
+    }
+  }
+
+  &__translate {
+    display: flex;
+    margin-right: 32px;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__divider {
+    width: 2px;
+    height: 40%;
+    background-color: lightgray;
+  }
+
+  & svg {
+    width: 32px;
+    height: 32px;
+    align-self: center;
+  }
+}
