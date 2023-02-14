@@ -14,6 +14,7 @@ import {
 } from '@mui/material';
 
 import Logo from '../assets/Logo.png';
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [open, setOpen] = useState(false);
@@ -29,13 +30,11 @@ function Header() {
     setOpen(openAction);
   };
 
-  const menuItems = ['Inbox', 'Starred', 'Send email', 'Drafts'];
-
   return (
     <header className='header'>
-      <a href='/'>
+      <Link to='/'>
         <img src={Logo} alt='Citlalli and Kevin initials' />
-      </a>
+      </Link>
 
       <div className='header__translate'>
         <span>English</span>
@@ -53,14 +52,16 @@ function Header() {
           onKeyDown={toggleDrawer(false)}
         >
           <List>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <HomeIcon />
-                </ListItemIcon>
-                <ListItemText primary='Home' />
-              </ListItemButton>
-            </ListItem>
+            <Link to={'/'}>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    <HomeIcon />
+                  </ListItemIcon>
+                  <ListItemText primary='Home' />
+                </ListItemButton>
+              </ListItem>
+            </Link>
 
             <ListItem disablePadding>
               <ListItemButton>
@@ -71,14 +72,16 @@ function Header() {
               </ListItemButton>
             </ListItem>
 
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <CollectionsIcon />
-                </ListItemIcon>
-                <ListItemText primary='Gallery' />
-              </ListItemButton>
-            </ListItem>
+            <Link to='gallery'>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    <CollectionsIcon />
+                  </ListItemIcon>
+                  <ListItemText primary='Gallery' />
+                </ListItemButton>
+              </ListItem>
+            </Link>
           </List>
         </Box>
       </Drawer>

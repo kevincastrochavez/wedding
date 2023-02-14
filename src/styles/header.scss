@@ -16,6 +16,12 @@
     margin-right: 32px;
     align-items: center;
     gap: 8px;
+
+    & span {
+      font-size: 14px;
+      font-weight: 300;
+      border-bottom: 1px solid $blue;
+    }
   }
 
   &__divider {
