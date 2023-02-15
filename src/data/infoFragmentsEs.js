@@ -2,7 +2,7 @@ const infoFragmentsEs = [
   {
     heading: 'FIESTA',
     subheadingOne: 'Sábado',
-    subheadingTwo: 'Marzo 25',
+    subheadingTwo: '25 de Marzo',
     subheadingThree: '2023',
     description: 'Algo no en ingles',
     linkText: 'RSVP',
@@ -20,8 +20,8 @@ const infoFragmentsEs = [
   {
     heading: 'SELLAMIENTO',
     subheadingOne: 'Templo de',
-    subheadingTwo: 'la Ciudad,',
-    subheadingThree: 'de Mexico',
+    subheadingTwo: 'la Ciudad',
+    subheadingThree: 'de México',
     description: undefined,
     linkText: 'Mexico City Temple',
     link: '#',

@@ -21,8 +21,6 @@ function Header() {
   const [{ language }, dispatch] = useStateValue();
   const [open, setOpen] = useState(false);
 
-  console.log(language);
-
   const toggleDrawer = (openAction) => (event) => {
     if (
       event.type === 'keydown' &&
