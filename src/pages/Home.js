@@ -8,8 +8,6 @@ import infoFragmentsEs from '../data/infoFragmentsEs';
 function Home() {
   const [{ language }] = useStateValue();
 
-  console.log(language);
-
   return (
     <main className='home'>
       <section className='home__hero'>
@@ -70,13 +68,17 @@ function Home() {
 
       <section className='home__temple'>
         <div className='home__date'>
-          <span>04</span>
-          <span>08</span>
+          <span>{language === 'en' ? '04' : '08'}</span>
+          <span>{language === 'en' ? '08' : '04'}</span>
           <span>23</span>
         </div>
       </section>
 
-      <InfoFragment {...infoFragmentsEn[2]} />
+      {language === 'en' ? (
+        <InfoFragment {...infoFragmentsEn[2]} />
+      ) : (
+        <InfoFragment {...infoFragmentsEs[2]} />
+      )}
 
       <img
         className='home__templeImg'

@@ -42,4 +42,10 @@
     height: 32px;
     align-self: center;
   }
+
+  &__drawer {
+    & svg {
+      color: $blue;
+    }
+  }
 }

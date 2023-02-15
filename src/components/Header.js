@@ -72,7 +72,12 @@ function Header() {
 
       <MenuIcon onClick={toggleDrawer(true)} />
 
-      <Drawer open={open} onClose={toggleDrawer(false)} anchor='right'>
+      <Drawer
+        open={open}
+        onClose={toggleDrawer(false)}
+        anchor='right'
+        className='header__drawer'
+      >
         <Box
           sx={{ width: 150 }}
           role='presentation'
@@ -86,7 +91,9 @@ function Header() {
                   <ListItemIcon>
                     <HomeIcon />
                   </ListItemIcon>
-                  <ListItemText primary='Home' />
+                  <ListItemText
+                    primary={language === 'en' ? 'Home' : 'Inicio'}
+                  />
                 </ListItemButton>
               </ListItem>
             </Link>
@@ -108,7 +115,9 @@ function Header() {
                   <ListItemIcon>
                     <CollectionsIcon />
                   </ListItemIcon>
-                  <ListItemText primary='Gallery' />
+                  <ListItemText
+                    primary={language === 'en' ? 'Gallery' : 'Galería'}
+                  />
                 </ListItemButton>
               </ListItem>
             </Link>
