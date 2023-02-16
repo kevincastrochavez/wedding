@@ -77,7 +77,7 @@ function Header() {
         className='header__drawer'
       >
         <Box
-          sx={{ width: 150 }}
+          className='header__drawer-box'
           role='presentation'
           onClick={toggleDrawer(false)}
           onKeyDown={toggleDrawer(false)}

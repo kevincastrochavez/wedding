@@ -45,8 +45,16 @@
   }
 
   &__drawer {
+    &-box {
+      width: 150px;
+    }
+
     & svg {
       color: $blue;
+    }
+
+    & span {
+      margin-left: -10px;
     }
   }
 }
@@ -60,8 +68,18 @@
       height: 60px;
     }
 
-    &__translate span {
-      font-size: 15px;
+    &__translate {
+      margin-right: 40px;
+
+      & span {
+        font-size: 15px;
+      }
+    }
+
+    &__drawer {
+      &-box {
+        width: 160px;
+      }
     }
   }
 }
