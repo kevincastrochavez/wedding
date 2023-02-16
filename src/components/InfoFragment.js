@@ -8,9 +8,10 @@ function InfoFragment({
   description,
   linkText,
   link,
+  className,
 }) {
   return (
-    <section className='infoFragment'>
+    <section className={`infoFragment ${className}`}>
       <h2>{heading}</h2>
 
       <div className='infoFragment__bar'></div>

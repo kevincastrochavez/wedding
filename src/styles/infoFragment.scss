@@ -40,6 +40,10 @@
     border-bottom: 1px solid $blue;
     color: $blue;
   }
+
+  &__two {
+    margin-bottom: 60px;
+  }
 }
 
 @media screen and (min-width: 400px) {
