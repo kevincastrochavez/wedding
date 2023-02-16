@@ -1,17 +1,8 @@
 .gallery {
-  //   &__separator {
-  //     height: 12px;
-  //     background-color: $ivory;
-  //     position: sticky;
-  //     top: 79px;
-  //   }
-
-  &__container {
-    padding: 24px 24px 32px;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
+  padding: 24px 24px 32px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
 
   & img {
     width: 100%;
@@ -19,5 +10,12 @@
     object-fit: cover;
     border-radius: 8px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .gallery {
+    padding: 32px;
+    gap: 24px;
   }
 }

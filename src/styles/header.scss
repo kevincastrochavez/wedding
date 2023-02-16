@@ -50,3 +50,18 @@
     }
   }
 }
+
+@media screen and (min-width: 500px) {
+  .header {
+    padding: 12px 32px;
+
+    & a img {
+      width: 12px;
+      height: 60px;
+    }
+
+    &__translate span {
+      font-size: 15px;
+    }
+  }
+}

@@ -104,3 +104,25 @@
     }
   }
 }
+
+@media screen and (min-width: 500px) {
+  .home {
+    &__hero {
+      margin-top: 160px;
+    }
+
+    & h1 {
+      font-size: 100px;
+    }
+
+    &__hero,
+    &__party,
+    &__temple {
+      padding: 0 32px;
+    }
+
+    &__pictures {
+      grid-template-columns: 32px 1fr 1fr 1fr 32px;
+    }
+  }
+}
