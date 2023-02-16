@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import { useStateValue } from '../StateProvider';
 
 function Footer() {
   const [{ language }] = useStateValue();
+  const location = useLocation();
 
   return (
-    <footer className='footer'>
+    <footer
+      className='footer'
+      id={`${location.pathname === '/gallery' && 'footerUp'}`}
+    >
       <h2>{language === 'en' ? 'REMINDER' : 'RECORDATORIO'}</h2>
 
       <div className='footer__bar'></div>
