@@ -41,3 +41,16 @@
     color: $blue;
   }
 }
+
+@media screen and (min-width: 400px) {
+  .infoFragment {
+    & h3 {
+      font-size: 45px;
+    }
+
+    & p,
+    & a {
+      font-size: 22px;
+    }
+  }
+}

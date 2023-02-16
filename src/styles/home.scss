@@ -96,3 +96,11 @@
     margin-bottom: 56px;
   }
 }
+
+@media screen and (min-width: 400px) {
+  .home {
+    & h1 {
+      font-size: 80px;
+    }
+  }
+}
