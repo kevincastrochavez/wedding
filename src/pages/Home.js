@@ -2,6 +2,12 @@ import React from 'react';
 
 import { useStateValue } from '../StateProvider';
 import InfoFragment from '../components/InfoFragment';
+
+import DunesOne from '../assets/dunesOne.jpg';
+import DunesTwo from '../assets/dunesTwo.jpg';
+import GardensOne from '../assets/gardensOne.jpg';
+import GardensTwo from '../assets/gardensTwo.jpg';
+
 import infoFragmentsEn from '../data/infoFragmentsEn';
 import infoFragmentsEs from '../data/infoFragmentsEs';
 
@@ -42,26 +48,26 @@ function Home() {
         </span>
         <img
           className='home__pictures-two'
-          src='http://via.placeholder.com/250'
-          alt=''
+          src={DunesTwo}
+          alt='Citlalli and Kevin hugging at the Sand Dunes'
         />
         <img
           className='home__pictures-three'
-          src='http://via.placeholder.com/250'
-          alt=''
+          src={DunesOne}
+          alt='Citlalli and Kevin under the sunset at the Sand Dunes'
         />
         <span className='home__pictures-four'>
           {language === 'en' ? '08' : '04'}
         </span>
         <img
           className='home__pictures-five'
-          src='http://via.placeholder.com/250'
-          alt=''
+          src={GardensTwo}
+          alt='Citlalli and Kevin looking at each other at the Ricks gardens'
         />
         <img
           className='home__pictures-six'
-          src='http://via.placeholder.com/250'
-          alt=''
+          src={GardensOne}
+          alt='Kevin knelt down proposing to Citlalli with the Temple on the background'
         />
         <span className='home__pictures-seven'>23</span>
       </section>
