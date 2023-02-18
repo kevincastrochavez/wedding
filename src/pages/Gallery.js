@@ -11,6 +11,8 @@ import GalleryEight from '../assets/galleryEight.jpg';
 import GalleryNine from '../assets/galleryNine.jpg';
 
 function Gallery() {
+  console.log('Something to log');
+
   return (
     <main className='gallery'>
       <img src={GalleryOne} alt='Picture' />
