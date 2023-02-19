@@ -4,7 +4,8 @@ const infoFragmentsEn = [
     subheadingOne: 'Saturday',
     subheadingTwo: 'March 25',
     subheadingThree: '2023',
-    description: 'Join the celebration as Citlalli Gonzalez and Kevin Castro',
+    description:
+      'Join the celebration as Citlalli Gonzalez and Kevin Castro. 6:00pm',
     linkText: 'RSVP',
     link: '#',
   },
@@ -13,7 +14,7 @@ const infoFragmentsEn = [
     subheadingOne: '389 Mariah',
     subheadingTwo: 'Ave. Rexburg,',
     subheadingThree: 'ID 83440',
-    description: undefined,
+    description: 'Time pending',
     linkText: 'Church of Jesus Christ',
     link: '#',
   },

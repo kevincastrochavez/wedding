@@ -13,7 +13,7 @@ const infoFragmentsEs = [
     subheadingOne: '389 Mariah',
     subheadingTwo: 'Ave. Rexburg,',
     subheadingThree: 'ID 83440',
-    description: undefined,
+    description: 'Hora pendiente',
     linkText: 'Church of Jesus Christ',
     link: '#',
   },
