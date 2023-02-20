@@ -62,12 +62,3 @@
     border-left: 2px solid $blue;
   }
 }
-
-@media screen and (min-width: 900px) {
-  .sidebar {
-    & a,
-    & p {
-      font-size: 12px;
-    }
-  }
-}

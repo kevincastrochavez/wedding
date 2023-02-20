@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
+import Gallery from '../pages/Gallery';
 import Home from '../pages/Home';
 import SideBar from './SideBar';
 
-function Layout() {
+function Layout({ page }) {
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
@@ -23,7 +24,8 @@ function Layout() {
   return (
     <div className={`${width >= 700 && 'layout'}`}>
       {width >= 700 && <SideBar />}
-      <Home isDesktop={width >= 700 && true} />
+      {page === 'Home' && <Home isDesktop={width >= 700 && true} />}
+      {page === 'Gallery' && <Gallery />}
     </div>
   );
 }

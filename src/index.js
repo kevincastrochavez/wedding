@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import './styles/main.scss';
-
 import reportWebVitals from './reportWebVitals';
-import Gallery from './pages/Gallery';
+
+import reducer, { initialState } from './reducer';
+import { StateProvider } from './StateProvider';
+
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { StateProvider } from './StateProvider';
-import reducer, { initialState } from './reducer';
-import Layout from './components/Layout';
+import './styles/main.scss';
+
+const Layout = React.lazy(() => import('./components/Layout'));
+// import Layout from './components/Layout';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,8 +21,23 @@ root.render(
       <Header />
 
       <Routes>
-        <Route exact path='/' element={<Layout />} />
-        <Route path='/gallery' element={<Gallery />} />
+        <Route
+          exact
+          path='/'
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <Layout page={'Home'} />
+            </Suspense>
+          }
+        />
+        <Route
+          path='/gallery'
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <Layout page={'Gallery'} />
+            </Suspense>
+          }
+        />
       </Routes>
 
       <Footer />

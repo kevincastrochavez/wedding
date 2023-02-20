@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import GalleryOne from '../assets/galleryOne.jpg';
 import GalleryTwo from '../assets/galleryTwo.jpg';
@@ -11,23 +11,33 @@ import GalleryEight from '../assets/galleryEight.jpg';
 import GalleryNine from '../assets/galleryNine.jpg';
 
 function Gallery() {
+  const [imagesArray, setImagesArray] = useState([]);
+
   useEffect(() => {
     window.scroll({ top: 0, behavior: 'smooth' });
+    setImagesArray([
+      GalleryOne,
+      GalleryTwo,
+      GalleryThree,
+      GalleryFour,
+      GalleryFive,
+      GallerySix,
+      GallerySeven,
+      GalleryEight,
+      GalleryNine,
+    ]);
   }, []);
 
   return (
     <main className='gallery'>
       <h1>Gallery</h1>
 
-      <img src={GalleryOne} alt='Picture' />
-      <img src={GalleryTwo} alt='Picture' />
-      <img src={GalleryThree} alt='Picture' />
-      <img src={GalleryFour} alt='Picture' />
-      <img src={GalleryFive} alt='Picture' />
-      <img src={GallerySix} alt='Picture' />
-      <img src={GallerySeven} alt='Picture' />
-      <img src={GalleryEight} alt='Picture' />
-      <img src={GalleryNine} alt='Picture' />
+      {imagesArray?.map((image) => (
+        <img
+          src={image}
+          alt='One of several images for the Gallery, featuring Citlalli and Kevin'
+        />
+      ))}
     </main>
   );
 }
