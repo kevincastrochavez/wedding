@@ -5,12 +5,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './styles/main.scss';
 
 import reportWebVitals from './reportWebVitals';
-import Home from './pages/Home';
 import Gallery from './pages/Gallery';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { StateProvider } from './StateProvider';
 import reducer, { initialState } from './reducer';
+import Layout from './components/Layout';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,7 +19,7 @@ root.render(
       <Header />
 
       <Routes>
-        <Route exact path='/' element={<Home />} />
+        <Route exact path='/' element={<Layout />} />
         <Route path='/gallery' element={<Gallery />} />
       </Routes>
 

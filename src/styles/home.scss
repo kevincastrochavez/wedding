@@ -26,7 +26,7 @@
 
   &__party {
     padding: 0 24px;
-    margin-top: 120px;
+    margin-top: 160px;
   }
 
   &__temple {
@@ -119,6 +119,10 @@
   }
 }
 
+.desktop {
+  margin-left: 60px;
+}
+
 @media screen and (min-width: 400px) {
   .home {
     & h1 {
@@ -127,7 +131,19 @@
 
     &__hero {
       & img {
-        transform: translate(-240px, 100px);
+        transform: translate(-240px, 120px);
+      }
+    }
+
+    &__party {
+      margin-top: 180px;
+    }
+
+    &__pictures {
+      grid-template-rows: 190px 230px 320px 160px 270px 260px 160px;
+
+      &-four {
+        transform: translateY(50px);
       }
     }
   }
@@ -136,7 +152,11 @@
 @media screen and (min-width: 500px) {
   .home {
     &__hero {
-      margin-top: 160px;
+      margin-top: 60px;
+
+      & img {
+        transform: translate(-210px, 160px);
+      }
     }
 
     & h1 {
@@ -154,8 +174,17 @@
       margin-top: 90px;
     }
 
+    &__party {
+      margin-top: 220px;
+    }
+
     &__pictures {
-      grid-template-columns: 32px 1fr 1fr 1fr 32px;
+      grid-template-columns: 32px 1fr 1fr 1fr 1fr 1fr 1fr 32px;
+
+      & img {
+        max-width: 350px;
+        max-height: 350px;
+      }
     }
   }
 }

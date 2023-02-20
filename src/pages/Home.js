@@ -13,7 +13,7 @@ import Temple from '../assets/temple.png';
 import infoFragmentsEn from '../data/infoFragmentsEn';
 import infoFragmentsEs from '../data/infoFragmentsEs';
 
-function Home() {
+function Home({ isDesktop }) {
   const [{ language }] = useStateValue();
 
   useEffect(() => {
@@ -21,14 +21,14 @@ function Home() {
   }, []);
 
   return (
-    <main className='home'>
-      <section className='home__hero'>
+    <main className={`${isDesktop ? 'desktop' : 'home'}`}>
+      <section className={`${isDesktop ? 'desktop__hero' : 'home__hero'}`}>
         <h1>Our Love Story</h1>
 
         <img src={Dunes} alt='Sand Dunes' />
       </section>
 
-      <section className='home__party'>
+      <section className={`${isDesktop ? 'desktop__party' : 'home__party'}`}>
         <div className='home__date'>
           <span>{language === 'en' ? '03' : '25'}</span>
           <span>{language === 'en' ? '25' : '03'}</span>
@@ -48,37 +48,61 @@ function Home() {
         <InfoFragment {...infoFragmentsEs[1]} />
       )}
 
-      <section className='home__pictures'>
-        <span className='home__pictures-one'>
+      <section
+        className={`${isDesktop ? 'desktop__pictures' : 'home__pictures'}`}
+      >
+        <span
+          className={`${
+            isDesktop ? 'desktop__pictures-one' : 'home__pictures-one'
+          }`}
+        >
           {language === 'en' ? '04' : '08'}
         </span>
         <img
-          className='home__pictures-two'
+          className={`${
+            isDesktop ? 'desktop__pictures-two' : 'home__pictures-two'
+          }`}
           src={DunesTwo}
           alt='Citlalli and Kevin hugging at the Sand Dunes'
         />
         <img
-          className='home__pictures-three'
+          className={`${
+            isDesktop ? 'desktop__pictures-three' : 'home__pictures-three'
+          }`}
           src={DunesOne}
           alt='Citlalli and Kevin under the sunset at the Sand Dunes'
         />
-        <span className='home__pictures-four'>
+        <span
+          className={`${
+            isDesktop ? 'desktop__pictures-four' : 'home__pictures-four'
+          }`}
+        >
           {language === 'en' ? '08' : '04'}
         </span>
         <img
-          className='home__pictures-five'
+          className={`${
+            isDesktop ? 'desktop__pictures-five' : 'home__pictures-five'
+          }`}
           src={GardensTwo}
           alt='Citlalli and Kevin looking at each other at the Ricks gardens'
         />
         <img
-          className='home__pictures-six'
+          className={`${
+            isDesktop ? 'desktop__pictures-six' : 'home__pictures-six'
+          }`}
           src={GardensOne}
           alt='Kevin knelt down proposing to Citlalli with the Temple on the background'
         />
-        <span className='home__pictures-seven'>23</span>
+        <span
+          className={`${
+            isDesktop ? 'desktop__pictures-seven' : 'home__pictures-seven'
+          }`}
+        >
+          23
+        </span>
       </section>
 
-      <section className='home__temple'>
+      <section className={`${isDesktop ? 'desktop__temple' : 'home__temple'}`}>
         <div className='home__date'>
           <span>{language === 'en' ? '04' : '08'}</span>
           <span>{language === 'en' ? '08' : '04'}</span>
@@ -92,7 +116,11 @@ function Home() {
         <InfoFragment {...infoFragmentsEs[2]} />
       )}
 
-      <img className='home__templeImg' src={Temple} alt='Mexico City Temple' />
+      <img
+        className={`${isDesktop ? 'desktop__templeImg' : 'home__templeImg'}`}
+        src={Temple}
+        alt='Mexico City Temple'
+      />
     </main>
   );
 }
