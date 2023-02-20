@@ -23,7 +23,7 @@ function Home({ isDesktop }) {
   return (
     <main className={`${isDesktop ? 'desktop' : 'home'}`}>
       <section className={`${isDesktop ? 'desktop__hero' : 'home__hero'}`}>
-        <h1>Our Love Story</h1>
+        <h1>Together Forever</h1>
 
         <img src={Dunes} alt='Sand Dunes' />
       </section>
@@ -45,7 +45,7 @@ function Home({ isDesktop }) {
       {language === 'en' ? (
         <InfoFragment {...infoFragmentsEn[1]} className='infoFragment__two' />
       ) : (
-        <InfoFragment {...infoFragmentsEs[1]} />
+        <InfoFragment {...infoFragmentsEs[1]} className='infoFragment__two' />
       )}
 
       <section
@@ -111,9 +111,15 @@ function Home({ isDesktop }) {
       </section>
 
       {language === 'en' ? (
-        <InfoFragment {...infoFragmentsEn[2]} />
+        <InfoFragment {...infoFragmentsEn[2]} className='infoFragment__three' />
       ) : (
-        <InfoFragment {...infoFragmentsEs[2]} />
+        <InfoFragment {...infoFragmentsEs[2]} className='infoFragment__three' />
+      )}
+
+      {language === 'en' ? (
+        <InfoFragment {...infoFragmentsEn[3]} className='infoFragment__four' />
+      ) : (
+        <InfoFragment {...infoFragmentsEs[3]} className='infoFragment__four' />
       )}
 
       <img

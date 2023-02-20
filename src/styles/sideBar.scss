@@ -1,12 +1,18 @@
 .sidebar {
+  grid-column: 1;
   height: 90vh;
   position: fixed;
-  left: 40px;
+  left: 32px;
   top: 40px;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+
+  & > a {
+    padding: 0 8px;
+  }
 
   & img {
     width: 10px;
@@ -15,7 +21,8 @@
   &__links {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 32px;
+    font-family: $body;
 
     & a {
       color: inherit;
@@ -23,6 +30,11 @@
       writing-mode: vertical-rl;
       text-orientation: mixed;
       transform: rotate(180deg);
+      border-left: 2px solid $blue;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      cursor: pointer;
     }
   }
 
@@ -30,5 +42,19 @@
     writing-mode: vertical-rl;
     text-orientation: mixed;
     transform: rotate(180deg);
+  }
+
+  &__translation {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    & p {
+      cursor: pointer;
+    }
+  }
+
+  &__active {
+    border-left: 2px solid $blue;
   }
 }

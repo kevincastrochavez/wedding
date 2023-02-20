@@ -21,7 +21,7 @@ function Layout() {
   }, [window.innerWidth]);
 
   return (
-    <div className='layout'>
+    <div className={`${width >= 700 && 'layout'}`}>
       {width >= 700 && <SideBar />}
       <Home isDesktop={width >= 700 && true} />
     </div>
