@@ -32,13 +32,13 @@ function SideBar() {
           className={language === 'es' ? 'sidebar__active' : undefined}
           onClick={handleSpanish}
         >
-          Español
+          ESPAÑOL
         </p>
         <p
           className={language === 'en' ? 'sidebar__active' : undefined}
           onClick={handleEnglish}
         >
-          English
+          ENGLISH
         </p>
       </div>
 
@@ -47,7 +47,7 @@ function SideBar() {
         <Link to='/gallery'>{language === 'en' ? 'GALLERY' : 'GALERÍA'}</Link>
       </div>
 
-      <p>Rexburg, ID</p>
+      <p>REXBURG, ID</p>
     </div>
   );
 }

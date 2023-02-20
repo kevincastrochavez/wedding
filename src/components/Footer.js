@@ -1,15 +1,30 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import { useStateValue } from '../StateProvider';
 
 function Footer() {
   const [{ language }] = useStateValue();
+  const [width, setWidth] = useState(0);
   const location = useLocation();
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+
+    window.addEventListener('resize', () => {
+      setWidth(window.innerWidth);
+    });
+
+    return () => {
+      window.removeEventListener('resize', () => {
+        console.log('Removing');
+      });
+    };
+  }, [window.innerWidth]);
 
   return (
     <footer
-      className='footer'
+      className={`footer ${width >= 700 && 'footerDesktop'}`}
       id={`${location.pathname === '/gallery' && 'footerUp'}`}
     >
       <h2>{language === 'en' ? 'REMINDER' : 'RECORDATORIO'}</h2>

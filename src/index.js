@@ -23,7 +23,7 @@ root.render(
         <Route path='/gallery' element={<Gallery />} />
       </Routes>
 
-      {/* <Footer /> */}
+      <Footer />
     </BrowserRouter>
   </StateProvider>
 );

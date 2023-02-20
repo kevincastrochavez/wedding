@@ -15,13 +15,13 @@
   }
 
   & img {
-    width: 10px;
+    width: 12px;
   }
 
   &__links {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 24px;
     font-family: $body;
 
     & a {
@@ -31,7 +31,7 @@
       text-orientation: mixed;
       transform: rotate(180deg);
       border-left: 2px solid $blue;
-      font-size: 12px;
+      font-size: 1.5vw;
       font-weight: 600;
       letter-spacing: 1px;
       cursor: pointer;
@@ -39,22 +39,34 @@
   }
 
   & p {
+    letter-spacing: 1px;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     transform: rotate(180deg);
+    font-size: 1.5vw;
   }
 
   &__translation {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 24px;
 
     & p {
       cursor: pointer;
+      font-weight: 600;
     }
   }
 
   &__active {
     border-left: 2px solid $blue;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .sidebar {
+    & a,
+    & p {
+      font-size: 12px;
+    }
   }
 }
