@@ -1,4 +1,5 @@
 .sidebar {
+  z-index: 2;
   grid-column: 1;
   height: 90vh;
   position: fixed;
@@ -31,7 +32,7 @@
       text-orientation: mixed;
       transform: rotate(180deg);
       border-left: 2px solid $blue;
-      font-size: 1.5vw;
+      font-size: 10px;
       font-weight: 600;
       letter-spacing: 1px;
       cursor: pointer;
@@ -43,7 +44,7 @@
     writing-mode: vertical-rl;
     text-orientation: mixed;
     transform: rotate(180deg);
-    font-size: 1.5vw;
+    font-size: 10px;
   }
 
   &__translation {

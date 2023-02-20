@@ -6,7 +6,7 @@ const infoFragmentsEn = [
     subheadingThree: '2023',
     description: '6:00pm - 10:00pm',
     linkText: 'RSVP',
-    link: '#',
+    link: 'https://citlalliandkevin.rsvpify.com/rsvp-page-preview/310358?signature=cf620de22ff400f707cb098dc103a4aa6f1af3014bffa9a0c641071718e99ee8',
   },
   {
     heading: 'THE VENUE',
@@ -14,7 +14,7 @@ const infoFragmentsEn = [
     subheadingTwo: 'Ave. Rexburg,',
     subheadingThree: 'ID 83440',
     linkText: 'Church of Jesus Christ',
-    link: '#',
+    link: 'https://goo.gl/maps/ZttuxybJjvQrPiK58',
   },
   {
     heading: 'THE SEALING',
@@ -29,7 +29,7 @@ const infoFragmentsEn = [
     subheadingTwo: 'City',
     subheadingThree: 'Temple',
     linkText: 'Mexico City Temple',
-    link: '#',
+    link: 'https://goo.gl/maps/6Tu3LYasbsaLCs2P7',
   },
 ];
 

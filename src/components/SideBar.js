@@ -43,7 +43,13 @@ function SideBar() {
       </div>
 
       <div className='sidebar__links'>
-        <Link to='/'>RSVP</Link>
+        <a
+          href='https://citlalliandkevin.rsvpify.com/rsvp-page-preview/310358?signature=cf620de22ff400f707cb098dc103a4aa6f1af3014bffa9a0c641071718e99ee8'
+          target='_blank'
+          rel='noreferrer'
+        >
+          RSVP
+        </a>
         <Link to='/gallery'>{language === 'en' ? 'GALLERY' : 'GALERÍA'}</Link>
       </div>
 

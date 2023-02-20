@@ -24,7 +24,9 @@ function InfoFragment({
 
       <p>{description}</p>
 
-      <a href={link}>{linkText}</a>
+      <a href={link} target='_blank' rel='noreferrer'>
+        {linkText}
+      </a>
     </section>
   );
 }

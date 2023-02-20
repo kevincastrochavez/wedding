@@ -23,7 +23,8 @@ function Home({ isDesktop }) {
   return (
     <main className={`${isDesktop ? 'desktop' : 'home'}`}>
       <section className={`${isDesktop ? 'desktop__hero' : 'home__hero'}`}>
-        <h1>Together Forever</h1>
+        {/* <h1>{language === 'en' ? 'Together Forever' : 'Siempre Juntos'}</h1> */}
+        <h1>{language === 'en' ? 'Eternal Vows' : 'Votos Eternos'}</h1>
 
         <img src={Dunes} alt='Sand Dunes' />
       </section>

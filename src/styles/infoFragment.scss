@@ -44,6 +44,13 @@
 
   &__two {
     margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__four {
+    position: relative;
+    z-index: 2;
   }
 }
 
