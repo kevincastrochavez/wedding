@@ -44,7 +44,7 @@ function SideBar() {
 
       <div className='sidebar__links'>
         <a
-          href='https://citlalliandkevin.rsvpify.com/rsvp-page-preview/310358?signature=cf620de22ff400f707cb098dc103a4aa6f1af3014bffa9a0c641071718e99ee8'
+          href='https://citlalliandkevin.rsvpify.com'
           target='_blank'
           rel='noreferrer'
         >

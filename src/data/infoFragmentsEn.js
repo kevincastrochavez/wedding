@@ -6,7 +6,7 @@ const infoFragmentsEn = [
     subheadingThree: '2023',
     description: '6:00pm - 10:00pm',
     linkText: 'RSVP',
-    link: 'https://citlalliandkevin.rsvpify.com/rsvp-page-preview/310358?signature=cf620de22ff400f707cb098dc103a4aa6f1af3014bffa9a0c641071718e99ee8',
+    link: 'https://citlalliandkevin.rsvpify.com',
   },
   {
     heading: 'THE VENUE',
