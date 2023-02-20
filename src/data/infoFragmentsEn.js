@@ -21,7 +21,7 @@ const infoFragmentsEn = [
   {
     heading: 'THE SEALING',
     subheadingOne: 'Mexico',
-    subheadingTwo: 'City,',
+    subheadingTwo: 'City',
     subheadingThree: 'Temple',
     description: undefined,
     linkText: 'Mexico City Temple',

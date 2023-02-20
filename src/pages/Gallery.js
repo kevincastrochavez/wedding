@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import GalleryOne from '../assets/galleryOne.jpg';
 import GalleryTwo from '../assets/galleryTwo.jpg';
@@ -11,10 +11,14 @@ import GalleryEight from '../assets/galleryEight.jpg';
 import GalleryNine from '../assets/galleryNine.jpg';
 
 function Gallery() {
-  console.log('Something to log');
+  useEffect(() => {
+    window.scroll({ top: 0, behavior: 'smooth' });
+  }, []);
 
   return (
     <main className='gallery'>
+      <h1>Gallery</h1>
+
       <img src={GalleryOne} alt='Picture' />
       <img src={GalleryTwo} alt='Picture' />
       <img src={GalleryThree} alt='Picture' />

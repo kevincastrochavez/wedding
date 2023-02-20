@@ -14,7 +14,7 @@ import {
   ListItemText,
 } from '@mui/material';
 
-import Logo from '../assets/Logo.png';
+import Logo from '../assets/logo.png';
 import { useStateValue } from '../StateProvider';
 
 function Header() {

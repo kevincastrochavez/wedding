@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { useStateValue } from '../StateProvider';
 import InfoFragment from '../components/InfoFragment';
@@ -15,6 +15,10 @@ import infoFragmentsEs from '../data/infoFragmentsEs';
 
 function Home() {
   const [{ language }] = useStateValue();
+
+  useEffect(() => {
+    window.scroll({ top: 0, behavior: 'smooth' });
+  }, []);
 
   return (
     <main className='home'>
