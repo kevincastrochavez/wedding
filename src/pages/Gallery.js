@@ -35,7 +35,7 @@ function Gallery() {
 
   return (
     <main className='gallery'>
-      <h1>{language === 'es' ? 'Gallery' : 'Galería'}</h1>
+      <h1>{language === 'en' ? 'Gallery' : 'Galería'}</h1>
 
       {imagesArray?.map((image) => (
         <LazyLoadImage
