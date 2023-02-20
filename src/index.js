@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -11,8 +11,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import './styles/main.scss';
 
-const Layout = React.lazy(() => import('./components/Layout'));
-// import Layout from './components/Layout';
+const Layout = lazy(() => import('./components/Layout'));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
